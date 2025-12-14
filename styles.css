@@ -1,0 +1,142 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#ff6b6b;
+  --accent-2:#7c5cff;
+  --glass: rgba(255,255,255,0.03);
+  --radius:10px;
+  --max-width:1100px;
+  --gap:16px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#071023 0%, #081026 60%);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  padding-bottom:48px;
+}
+
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:20px;
+}
+
+.site-header{
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+  position:sticky;
+  top:0;
+  z-index:30;
+  backdrop-filter: blur(6px);
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  justify-content:space-between;
+}
+
+.brand{
+  font-weight:700;
+  font-size:1.25rem;
+  color:var(--accent);
+  text-decoration:none;
+  letter-spacing:0.4px;
+}
+
+.main-nav a{
+  margin-left:12px;
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.menu-toggle{display:none;background:none;border:0;color:var(--muted);font-size:1.3rem}
+
+.page{
+  margin-top:20px;
+  display:grid;
+  gap:var(--gap);
+}
+
+/* layout */
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:var(--gap);
+}
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:var(--gap);
+}
+
+/* cards */
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);
+  padding:16px;
+  border-radius:var(--radius);
+  box-shadow: 0 4px 18px rgba(2,6,23,0.5);
+}
+
+.small{font-size:0.9rem;color:var(--muted)}
+.h1{font-size:1.6rem;margin:0 0 8px 0}
+.h2{font-size:1.1rem;margin:0 0 8px 0;color:#dbeafe}
+
+/* downloads */
+.download-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px dashed rgba(255,255,255,0.02)}
+.download-row:first-child{border-top:0}
+.btn{
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  border:0;color:white;padding:8px 12px;border-radius:8px;font-weight:700;text-decoration:none;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.05)}
+.meta{color:var(--muted);font-size:0.9rem}
+
+/* progress */
+.progress-wrap{background:var(--glass);padding:12px;border-radius:8px}
+.progress{
+  height:12px;background:rgba(255,255,255,0.04);border-radius:999px;overflow:hidden;margin-top:8px;
+}
+.progress > i{
+  display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:999px;transition:width 800ms ease;
+}
+
+/* countdown */
+.countdown{display:flex;gap:8px;align-items:center}
+.countdown .time{
+  background:rgba(255,255,255,0.02);padding:8px;border-radius:8px;min-width:48px;text-align:center;font-weight:700;font-family:var(--mono);
+}
+
+/* bugs */
+.bug-item{padding:10px;border-radius:8px;margin-bottom:8px;border:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;gap:12px}
+.badge{background:rgba(255,255,255,0.03);padding:4px 8px;border-radius:999px;font-size:0.8rem}
+
+/* wiki/tutorial list */
+.item-list{display:grid;gap:8px}
+.item{padding:12px;border-radius:8px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02)}
+.item h3{margin:0 0 6px 0}
+
+/* UI test helpers */
+.ui-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.kv{display:flex;justify-content:space-between;align-items:center;padding:8px;background:rgba(255,255,255,0.01);border-radius:8px}
+
+/* responsive */
+@media (max-width:860px){
+  .grid-2{grid-template-columns:1fr}
+  .menu-toggle{display:block}
+  .main-nav{display:none;flex-direction:column}
+  .main-nav.show{display:flex}
+}

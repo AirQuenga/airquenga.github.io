@@ -1,0 +1,56 @@
+{
+  "downloads": [
+    {
+      "id":"bonk-v1.4.2",
+      "title":"BonkWithFriends v1.4.2 (stable)",
+      "platform":"Windows / Linux / macOS",
+      "size":"125 MB",
+      "url":"#download-bonk-v1.4.2",
+      "notes":"Stable release. Recommended for most users."
+    },
+    {
+      "id":"bonk-beta-1.5.0",
+      "title":"BonkWithFriends Beta 1.5.0",
+      "platform":"Windows (x64)",
+      "size":"130 MB",
+      "url":"#download-bonk-beta-1.5.0",
+      "notes":"Beta build with experimental features. Use at your own risk."
+    },
+    {
+      "id":"mod-tools",
+      "title":"Mod Tools Pack",
+      "platform":"Cross-platform",
+      "size":"45 MB",
+      "url":"#download-mod-tools",
+      "notes":"Tools for modders and creators."
+    }
+  ],
+  "tutorials": [
+    {"id":"tut-setup","title":"Setup & Installation","summary":"How to install BonkWithFriends from scratch","url":"#tutorial-setup"},
+    {"id":"tut-modding-101","title":"Modding 101","summary":"Beginner modding tutorial, assets & basics","url":"#tutorial-modding-101"},
+    {"id":"tut-server","title":"Hosting a Server","summary":"Guide to hosting multiplayer sessions","url":"#tutorial-server"}
+  ],
+  "wiki": [
+    {"id":"wiki-gameplay","title":"Gameplay Mechanics","content":"Placeholder gameplay mechanics page."},
+    {"id":"wiki-commands","title":"Console Commands","content":"List of debug and admin commands."},
+    {"id":"wiki-art-assets","title":"Art & Assets","content":"Asset naming conventions and licensing."}
+  ],
+  "updates": [
+    {"id":"u-2025-12-01","title":"v1.4.2 released","date":"2025-12-01","description":"Fixed major desync issues and improved performance."},
+    {"id":"u-2025-11-20","title":"Beta 1.5.0 pushed","date":"2025-11-20","description":"Experimental new networking stack."}
+  ],
+  "bugs": [
+    {"id":"b-101","title":"Crash on startup (Windows)", "severity":"critical","status":"open","reporter":"player123","notes":"Happens when graphics driver older than 2020."},
+    {"id":"b-122","title":"Server tick drift", "severity":"major","status":"in-progress","reporter":"netlord","notes":"Investigating clock sync."},
+    {"id":"b-200","title":"Minor UI overlap", "severity":"minor","status":"open","reporter":"ui_tester","notes":"Tooltips overlap on narrow screens."}
+  ],
+  "trackers": [
+    {"id":"trk-1","title":"Networking rewrite", "progress":67,"owner":"@devA"},
+    {"id":"trk-2","title":"Custom map editor", "progress":34,"owner":"@devB"},
+    {"id":"trk-3","title":"Localization (fr,es,pt)", "progress":12,"owner":"@local-team"}
+  ],
+  "countdowns": [
+    {"id":"cd-1","title":"Next hotfix window","until":"2026-01-07T18:00:00Z"},
+    {"id":"cd-2","title":"Community event: BonkFest","until":"2026-02-14T20:00:00Z"}
+  ]
+}
