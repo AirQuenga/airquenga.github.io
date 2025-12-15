@@ -1,28 +1,28 @@
 {
   "downloads": [
     {
-      "id":"bonk-v1.4.2",
-      "title":"BonkWithFriends v1.4.2 (stable)",
+      "id":"bonk-v1.0.0",
+      "title":"BonkWithFriends v1.0.0 (stable)",
       "platform":"Windows / Linux / macOS",
       "size":"125 MB",
-      "url":"#download-bonk-v1.4.2",
-      "notes":"Stable release. Recommended for most users."
+      "url":"#download-bonk-v1.0.0",
+      "notes":"Unavaliabe,"
     },
     {
-      "id":"bonk-beta-1.5.0",
-      "title":"BonkWithFriends Beta 1.5.0",
+      "id":"bonk-beta-0.1.0",
+      "title":"BonkWithFriends Beta 0.1.0",
       "platform":"Windows (x64)",
       "size":"130 MB",
-      "url":"#download-bonk-beta-1.5.0",
-      "notes":"Beta build with experimental features. Use at your own risk."
+      "url":"#download-bonk-beta-0.1.0",
+      "notes":"Unavaliabe."
     },
     {
-      "id":"mod-tools",
-      "title":"Mod Tools Pack",
-      "platform":"Cross-platform",
-      "size":"45 MB",
-      "url":"#download-mod-tools",
-      "notes":"Tools for modders and creators."
+      "id":"bonk-alpha-0.1.0",
+      "title":"BonkWithFriends Alpha 0.1.0",
+      "platform":"Windows (x64)",
+      "size":"130 MB",
+      "url":"#download-bonk-alpha-0.1.0",
+      "notes":"Avaliable and working."
     }
   ],
   "tutorials": [
@@ -36,21 +36,21 @@
     {"id":"wiki-art-assets","title":"Art & Assets","content":"Asset naming conventions and licensing."}
   ],
   "updates": [
-    {"id":"u-2025-12-01","title":"v1.4.2 released","date":"2025-12-01","description":"Fixed major desync issues and improved performance."},
-    {"id":"u-2025-11-20","title":"Beta 1.5.0 pushed","date":"2025-11-20","description":"Experimental new networking stack."}
+    {"id":"u-2025-12-01","title":"v0.1.0 released","date":"2025-12-10","description":"Fixed major desync issues and improved performance."},
+    {"id":"u-2025-11-20","title":"Beta 0.1.0 pushed","date":"2025-12-10","description":"Experimental new networking stack."}
   ],
   "bugs": [
-    {"id":"b-101","title":"Crash on startup (Windows)", "severity":"critical","status":"open","reporter":"player123","notes":"Happens when graphics driver older than 2020."},
-    {"id":"b-122","title":"Server tick drift", "severity":"major","status":"in-progress","reporter":"netlord","notes":"Investigating clock sync."},
-    {"id":"b-200","title":"Minor UI overlap", "severity":"minor","status":"open","reporter":"ui_tester","notes":"Tooltips overlap on narrow screens."}
+    {"id":"b-101","title":"test", "severity":"critical","status":"open","reporter":"player123","notes":"Happens when graphics driver older than 2020."},
+    {"id":"b-122","title":"test", "severity":"major","status":"in-progress","reporter":"netlord","notes":"Investigating clock sync."},
+    {"id":"b-200","title":"test", "severity":"minor","status":"open","reporter":"ui_tester","notes":"Tooltips overlap on narrow screens."}
   ],
   "trackers": [
-    {"id":"trk-1","title":"Networking rewrite", "progress":67,"owner":"@devA"},
-    {"id":"trk-2","title":"Custom map editor", "progress":34,"owner":"@devB"},
-    {"id":"trk-3","title":"Localization (fr,es,pt)", "progress":12,"owner":"@local-team"}
+    {"id":"trk-1","title":"Being dumb", "progress":67,"owner":"@r00tz"},
+    {"id":"trk-2","title":"Super Cool", "progress":34,"owner":"@AirQuenga"},
+    {"id":"trk-3","title":"Testing", "progress":12,"owner":"@r00tz"}
   ],
   "countdowns": [
     {"id":"cd-1","title":"Next hotfix window","until":"2026-01-07T18:00:00Z"},
-    {"id":"cd-2","title":"Community event: BonkFest","until":"2026-02-14T20:00:00Z"}
+    {"id":"cd-2","title":"Community event: BonkOff","until":"2026-02-14T20:00:00Z"}
   ]
 }
