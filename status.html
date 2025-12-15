@@ -1,0 +1,20 @@
+---
+layout: default
+title: Update Status
+permalink: /status/
+---
+<div class="page">
+  <section class="card">
+    <h1 class="h1">Update Status</h1>
+    <p class="small">Timeline and recent logs.</p>
+    <div>
+      {% for u in site.data.content.updates %}
+        <div style="padding:10px 0;border-top:1px dashed rgba(16,24,40,0.03)">
+          <div style="font-weight:700">{{ u.title }}</div>
+          <div class="small">{{ u.date }}</div>
+          <div style="margin-top:6px">{{ u.description }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
