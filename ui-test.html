@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UI Test — BonkWithFriends</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#/">UI Test</a>
+      <nav class="main-nav">
+        <a href="index.html">Back</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1 class="h1">Standalone UI Test Page</h1>
+      <p class="small">This page imports the same CSS and demonstrates components. It expects `data/content.json` next to it.</p>
+      <div id="ui-root"></div>
+    </section>
+  </main>
+
+  <script type="module">
+    import('./app.js').then(m => {
+      // simple navigation to the UI-test route
+      location.hash = '#/ui-test';
+      // app.js will render inside #app; move it into this page
+      const appEl = document.getElementById('app');
+      if(appEl){
+        const root = document.getElementById('ui-root');
+        root.appendChild(appEl);
+      }
+    }).catch(e => {
+      console.error('failed to import app.js', e);
+      document.getElementById('ui-root').textContent = 'Unable to load UI test (app.js import failed).';
+    });
+  </script>
+</body>
+</html>
