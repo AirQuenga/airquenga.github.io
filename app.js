@@ -24,7 +24,7 @@ function renderHome(){
   page.innerHTML = `
     <section class="card">
       <h1 class="h1">Welcome to BonkWithFriends Hub</h1>
-      <p class="small">This is a placeholder hub with downloads, tutorials, wiki, status, bug list, progress trackers and countdowns. Use <a href="#/ui-test">UI Test</a> to see all components.</p>
+      <p class="small">This is the hub for downloads, tutorials, wiki, status, bug list, progress trackers and countdowns. Click <a href="#/ui-test">UI Test</a> to see all components.</p>
     </section>
     <div class="grid-2">
       <div>
