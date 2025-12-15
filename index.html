@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product — Simple, Fast, Delightful</title>
+
+  <!-- Inter font (close to Linear's typography) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#0f1724" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="/">
+        <!-- inline SVG logo -->
+        <img src="logo.svg" alt="Brand logo" width="36" height="36" />
+        <span class="brand-name">AirQuenga</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#product">Product</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+        <a href="#company">Company</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-ghost" href="#login">Log in</a>
+        <a class="btn btn-primary" href="#signup">Get started</a>
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">Build world-class products — faster.</h1>
+          <p class="lead">
+            A frictionless issue tracker and product platform — designed for teams that move fast.
+            Focus on what matters: product, not process.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="#signup">Get started — it's free</a>
+            <a class="btn btn-ghost" href="#tour">Live demo</a>
+          </div>
+
+          <ul class="hero-trust">
+            <li><strong>70,000+</strong> users</li>
+            <li><strong>100k+</strong> issues tracked</li>
+            <li><strong>Used by</strong> small teams & enterprises</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="card visual-card">
+            <div class="visual-header">Project • Roadmap</div>
+            <div class="visual-body">
+              <div class="pill">Sprint</div>
+              <div class="screenshot-placeholder">Screenshot</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="product" class="features container">
+      <h2 class="section-title">Powerful, yet simple</h2>
+      <div class="features-grid">
+        <article class="feature">
+          <h3>Fast issue tracking</h3>
+          <p>Minimal UI, keyboard-driven workflows, and lightning fast performance.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Roadmaps & planning</h3>
+          <p>Plan releases, track progress, and keep your roadmap in sync with your team.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Integrations</h3>
+          <p>Connect with Git, Slack and CI for a seamless workflow.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="container cta-strip">
+      <div class="cta-inner">
+        <div>
+          <h3>Ready to ship better software?</h3>
+          <p>Start a free trial — no credit card required.</p>
+        </div>
+        <a class="btn btn-primary" href="#signup">Start free trial</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> AirQuenga</div>
+      <div class="footer-links">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
