@@ -1,76 +1,78 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BonkWithFriends — Hub</title>
+---
+layout: default
+title: Home
+description: Welcome to the BonkWithFriends hub.
+permalink: /
+---
+<div class="page">
+  <section class="card">
+    <h1 class="h1">Welcome to BonkWithFriends Hub</h1>
+    <p class="small">This site is a starter Jekyll-compatible hub for the mod with downloads, tutorials, wiki, update status, known bugs, trackers and a UI playground.</p>
+  </section>
 
-  <!-- Inter font (used by Linear) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="BonkWithFriends hub — downloads, tutorials, wiki, updates, bugs, trackers, and UI playground.">
-</head>
-<body>
-  <div class="app-shell">
-    <aside class="sidebar" role="navigation" aria-label="Primary">
-      <div class="sidebar-top">
-        <a class="brand" href="#/">BonkWithFriends</a>
+  <div class="grid-2">
+    <div>
+      <div class="card">
+        <h2 class="h2">Latest Releases</h2>
+        <div id="latest-downloads">
+          {% assign dls = site.data.content.downloads | slice: 0, 3 %}
+          {% for d in dls %}
+            <div class="download-row">
+              <div>
+                <div style="font-weight:700">{{ d.title }}</div>
+                <div class="meta">{{ d.platform }} • {{ d.size }}</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+                <a class="btn" href="{{ d.url }}">{{ "Download" }}</a>
+                <div class="small">{{ d.notes }}</div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
       </div>
 
-      <nav class="sidebar-nav" id="main-nav">
-        <a class="nav-item" href="#/"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></a>
-        <a class="nav-item" href="#/downloads"><span class="nav-icon">⬇️</span><span class="nav-label">Downloads</span></a>
-        <a class="nav-item" href="#/tutorials"><span class="nav-icon">📘</span><span class="nav-label">Tutorials</span></a>
-        <a class="nav-item" href="#/wiki"><span class="nav-icon">📚</span><span class="nav-label">Wiki</span></a>
-        <a class="nav-item" href="#/status"><span class="nav-icon">🔄</span><span class="nav-label">Update Status</span></a>
-        <a class="nav-item" href="#/bugs"><span class="nav-icon">🐞</span><span class="nav-label">Known Bugs</span></a>
-        <a class="nav-item" href="#/ui-test"><span class="nav-icon">🎛️</span><span class="nav-label">UI Test</span></a>
-      </nav>
+      <div class="card" style="margin-top:12px">
+        <h2 class="h2">Recent Updates</h2>
+        <div id="recent-updates">
+          {% for u in site.data.content.updates %}
+            <div style="padding:8px 0;border-top:1px dashed rgba(16,24,40,0.03)">
+              <div style="font-weight:700">{{ u.title }}</div>
+              <div class="small">{{ u.date }} — {{ u.description }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
 
-      <div class="sidebar-footer">
-        <button id="new-issue-btn" class="btn-ghost">Report bug</button>
+    <aside>
+      <div class="card">
+        <h2 class="h2">Trackers</h2>
+        <div id="trackers">
+          {% for t in site.data.content.trackers %}
+            <div style="margin-bottom:12px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div><strong>{{ t.title }}</strong><div class="small">Owner: {{ t.owner }}</div></div>
+                <div class="small">{{ t.progress }}%</div>
+              </div>
+              <div class="progress" aria-hidden="true"><i data-progress="{{ t.progress }}"></i></div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h2 class="h2">Countdowns</h2>
+        <div id="countdowns">
+          {% for c in site.data.content.countdowns %}
+            <div style="margin-bottom:8px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div class="small">{{ c.title }}</div>
+                <div class="small" data-until="{{ c.until }}">—</div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
       </div>
     </aside>
-
-    <div class="main-column">
-      <header class="topbar">
-        <div class="topbar-left">
-          <button id="menu-toggle" class="icon-btn" aria-label="Toggle menu">☰</button>
-          <div class="search">
-            <input id="search" placeholder="Search tutorials, wiki, bugs..." aria-label="Search" />
-            <span class="search-kbd">Ctrl K</span>
-          </div>
-        </div>
-
-        <div class="topbar-right">
-          <div class="status-pill">v1.4.2</div>
-          <div class="avatar" title="Team">AQ</div>
-        </div>
-      </header>
-
-      <main id="app" class="content-area" role="main">
-        <!-- SPA content rendered by app.js -->
-      </main>
-
-      <footer class="site-footer">
-        <div class="foot-inner">
-          <small>BonkWithFriends — placeholder hub • Built by AirQuenga</small>
-        </div>
-      </footer>
-    </div>
   </div>
-
-  <script src="app.js" type="module"></script>
-  <script>
-    // small client-side helper: close sidebar on mobile when selecting a route
-    document.getElementById('main-nav').addEventListener('click', (e) => {
-      if(window.innerWidth < 880) document.querySelector('.sidebar').classList.toggle('collapsed', true);
-    });
-    // menu toggle
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-      document.querySelector('.sidebar').classList.toggle('collapsed');
-    });
-  </script>
-</body>
-</html>
+</div>
